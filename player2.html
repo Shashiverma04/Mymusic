@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Music</title>
+
+    <!-- ICON IMAGE -->
+    <link rel="icon" href="IMAGE1.png" type="image/png" >
+
+    <!-- USER STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="player2.css">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="class1">
+        <div class="container" style="width:250px; margin: auto; margin-top: 23vh; margin-bottom: 19vh;">
+      
+      <div class="card text-center" id="preic" style=" border-radius:20%; width: 45vh;">
+        
+        <h2 id="name" style="background: initial; font-size: 50px; font-family: 'Kalam',cursive; color: #775887;">Saami</h2>
+      
+        <small class="text-muted" id="writer" style="background: initial; font-size: 15px; font-family: 'Dancing Script', cursive; color: #A8CABA;"> | Sunidhi C |</small>
+        <span style="">  
+          <button type="button"  class="btn btn-default btn-sm" style="font-size:20px; " onclick="volume()">
+            <span id="volume_button" class="glyphicon glyphicon-volume-up"></span>
+          </button>      
+          <input type="range" style="display: none;"  min="0" max="100" value="100" id="Seekers" onchange="volume_change()">
+      </span>
+
+        <!-- Poster Image -->  
+        <img src="Saami.jpg" class="card-img-top clear" id="imag" style="border-radius: 50%; padding: 20px; " >
+
+
+        <!-- Audio -->
+        <audio src="Saami Saami Hindi - Pushpa.mp3" preload="metadata" id="aud" onended="next(), change()" ></audio>
+
+        <div class="card-body text-center ">
+          
+          <!-- Duration -->
+          <div class="slider_container" style="background: initial;">
+            <div class="current-time" style="min-width:6vw;">00:00</div>
+            <input type="range" min="0" max="100" value="0" id="Seeker" onchange="change_duration()">
+            <div class="total-duration" style="min-width:6vw;">03:47</div>
+          </div>
+
+          <!-- Buttons -->
+          <p style="padding: 10px; background: initial;">
+            <button style="font-size:20px" onclick="back(); changefun();"><span class="glyphicon glyphicon-step-backward"></span></button>
+            <button style="font-size:20px" id="backward" onclick="backward()"><span class="glyphicon glyphicon-backward" ></span></button>
+            <button style="font-size:20px" onclick="change()"><span class="glyphicon glyphicon-play" id="cle"></span></button>
+            <button style="font-size:20px" onclick="forward()"><span class="glyphicon glyphicon-forward" ></span></button>
+            <button style="font-size:20px ;" onclick="next(); changefun();"><span class="glyphicon glyphicon-step-forward"></span></button>
+            <button type="button" onclick="reload()" style="border-color:transparent; font-size:20px;" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-repeat"></span>
+        </button>
+          </p>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+    <script src="player2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>

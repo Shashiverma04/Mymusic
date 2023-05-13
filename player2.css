@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+html
+{
+  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;              
+}
+
+.glyphicon
+{
+  background: initial;
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+#class1
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+
+.slider_container
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#class
+{
+  margin: 0;
+  padding: 0;
+}
+
+#preic
+{
+  background:initial;
+  border: none;
+}
+
+#myVideo
+{
+  position: absolute;    
+  right: 0;
+  bottom: 0;
+  height: inherit;
+  width: inherit;
+}
+body
+{
+  background-image: url("back.mp4");
+  height: auto;
+}
+
+
+#imag
+{
+  border-radius: 62%;
+  padding: 20px;
+  border: 3px dotted #5D4157;
+}
+
+.clear
+{
+  animation-name: rotat;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;  
+}
+
+@keyframes rotat
+{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+input[type="range"]
+{ 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: black; 
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button
+{
+  margin: 2px !important;
+  padding: 7px;
+  border-radius:50% !important;
+  display: inline-table;
+  color: ghostwhite !important;
+  background: #3A1C71 !important;
+  background: -webkit-radial-gradient(#A8CABA, #5D4157) !important;
+  background: radial-gradient(#A8CABA, #5D4157) !important;
+  border-color: transparent;
+}
+
+button:hover
+{
+  translate: 2% 2%;
+  box-shadow: 5px 5px 17px black;
+}
